@@ -1146,7 +1146,7 @@ llikAIC <- function(object) {
     llik <- logLik(object)
     AICstats <- 
         c(AIC = AIC(llik), BIC = BIC(llik), logLik = c(llik),
-          deviance = -2*llik, ## FIXME:
+          deviance = c(-2*llik), ## FIXME:
           df.resid = df.residual(object))
     list(logLik = llik, AICtab = AICstats)
 }
